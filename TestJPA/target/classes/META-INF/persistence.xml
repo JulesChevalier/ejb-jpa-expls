@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
+  <persistence-unit name="persistence" transaction-type="JTA">
+    <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+    <jta-data-source>test_jpa</jta-data-source>
+    <class>User</class>
+    <properties>
+      <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema"/>
+    </properties>
+  </persistence-unit>
+</persistence>

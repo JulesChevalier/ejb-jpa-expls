@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<!-- <persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence"> -->
+<!-- 	<persistence-unit name="jpa_mysql"> -->
+<!-- 		<provider>org.apache.openjpa.persistence.PersistenceProviderImpl -->
+<!-- 		</provider> -->
+<!-- 		<class>User</class> -->
+<!-- 		<properties> -->
+<!-- 			<property name="openjpa.ConnectionURL" value="jdbc:mysql://localhost:3306/ejb" /> -->
+<!-- 			<property name="openjpa.ConnectionDriverName" value="com.mysql.jdbc.Driver" /> -->
+<!-- 			<property name="openjpa.ConnectionUserName" value="tester" /> -->
+<!-- 			<property name="openjpa.ConnectionPassword" value="tester" /> -->
+<!-- 			<property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema" /> -->
+<!-- 		</properties> -->
+<!-- 	</persistence-unit> -->
+<!-- </persistence> -->
+
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence">
+  <persistence-unit name="test_jpa" transaction-type="JTA">
+    <provider>org.apache.openjpa.persistence.PersistenceProviderImpl</provider>
+    <jta-data-source>test_jpa</jta-data-source>
+    <class>User</class>
+    <properties>
+      <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema"/>
+    </properties>
+  </persistence-unit>
+</persistence>
